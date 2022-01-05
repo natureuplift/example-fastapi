@@ -1,0 +1,8 @@
+--SELECT * FROM posts LEFT JOIN votes ON posts.id = votes.post_id;
+--SELECT * FROM posts RIGHT JOIN votes ON posts.id = votes.post_id;
+--SELECT posts.id, COUNT(*) FROM posts LEFT JOIN votes ON posts.id = votes.post_id GROUP BY posts.id;
+--SELECT posts.id, COUNT(votes.post_id) FROM posts LEFT JOIN votes ON posts.id = votes.post_id GROUP BY posts.id;
+--SELECT posts.*, COUNT(votes.post_id) FROM posts LEFT JOIN votes ON posts.id = votes.post_id GROUP BY posts.id;
+--SELECT posts.*, COUNT(votes.post_id) AS votes FROM posts LEFT JOIN votes ON posts.id = votes.post_id GROUP BY posts.id;
+SELECT posts.*, COUNT(votes.post_id) AS votes FROM posts LEFT JOIN votes ON posts.id = votes.post_id WHERE posts.id = 13 GROUP BY posts.id;
+
